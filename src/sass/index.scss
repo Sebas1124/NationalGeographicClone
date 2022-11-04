@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,600;1,200;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,600;1,200;1,500&family=Roboto:ital,wght@1,300;1,500&display=swap');
+
+$yellow: #FFCC00;
+$Textcolor: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Magazine {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.title{
+    margin-top: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 3.5px;
+    -webkit-font-smoothing: antialiased;
+     & span { 
+         margin-left: 2.2rem;
+        }
+}
+
+.information {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    gap: 1rem;
+    font-size: 18px;
+    letter-spacing: .5px;
+     & a {
+        background-image: -o-linear-gradient(330deg, $yellow 0, $yellow 100%);
+        background-image: linear-gradient(120deg, $yellow, $yellow);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        border-bottom: 2px solid $yellow;
+        text-decoration: none;
+        color: #fff;
+        -webkit-transition: background-size .125s ease-in;
+        transition: background-size .125s ease-in;
+     }
+    & a:hover{
+        font-weight: 300;
+        color: #000;
+        cursor: pointer;
+        background-size: 100% 100%;
+    }
+}
+
+.divider{
+    background-color: $yellow;
+    height: 4px;
+    line-height: 0;
+    margin: 21px auto 0;
+    width: 30px;
+    margin-bottom: 2rem;
+}
+
+.CardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.Card__Yellow{
+    width: 320px;
+    height: 340px;
+    border-bottom: 3px solid $yellow;
+    border-right: 3px solid $yellow;
+    overflow: hidden;
+}
+
+.Card{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    & img {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: 337px;
+        opacity: .5;
+    }
+
+}
+.Card:hover img{
+    transition: .2s ease-in;
+    opacity: .9;
+    transform: scale(1.2);
+}
+
+.Card .Header{
+    position: absolute;
+    z-index: 2;
+    font-size: 16px;
+    z-index: 999;
+    color: $Textcolor;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    top: 140px;
+    left: 20px;
+
+    & h1 {
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        letter-spacing: 2.5px;
+    }
+
+    & .Info p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    & .btn {
+        display: flex;
+        align-content: center;
+        margin-bottom: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        & span {
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-top: 3px;
+            letter-spacing: 3.5px;
+        }
+    }
+}
+
+// Cards
+
+.Simple__Card{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 314px;
+    height: 424px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    & .info{
+        z-index: 99;
+        margin-top: -10px;
+        width: 100%;
+        color: #000;
+        background-color: #fff;
+        height: max-content;
+        cursor: pointer;
+
+        & h1 {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            font-size: 17px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            letter-spacing: 5.5px;
+        }
+        & p{
+            font-size: 21px;
+            margin-left: 1rem;
+            margin-bottom: 2rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 1rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+        }
+        & box-icon{
+            margin-top: 1rem;
+            margin-left: .7rem;
+        }
+
+        & .btn-card{
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2.2px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.6rem;
+        }
+
+        & .btn-card .btn-info{
+            margin-top: 1rem;
+            margin-left: .6rem;
+        }
+
+    }
+}
+
+.Simple__Card:hover .Picture{
+    transition: .2s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.line{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    /* display: flex; */
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.line::before{
+    -webkit-box-flex: 0;
+    background: #fc0;
+    content: "";
+    display: block;
+    -ms-flex: 0 0 5px;
+    flex: 0 0 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 5px;
+    margin-bottom: 8px;
+    margin-right: 20px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.Header__new{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Libre Franklin', sans-serif;
+    margin-bottom: 32px;
+    padding: 0;
+    text-align: left;
+    margin-left: -1.5rem;
+}
+
+// News 
+
+.News__container{
+    margin-left: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    & h1 {
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-size: 14px;
+        margin-bottom: .6rem;
+    }
+
+    & h3{
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-bottom: .4rem;
+        font-weight: 100;
+    }
+
+    & p{
+        font-size: 17px;
+        margin-bottom: .4rem;
+        font-weight: 700;
+        margin-right: .5rem;
+    }
+
+    & img {
+        width: 80px;
+    }
+}
+.News__container:hover p
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.News__container:hover h1, h3, img{
+    cursor: pointer;
+}
+
+// Fnal Magazine
+
+.Magazine__button{
+    font-weight: 600;
+    font-family: 'Libre Franklin', sans-serif;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    & a {
+        background-image: -o-linear-gradient(330deg, $yellow 0, $yellow 100%);
+        background-image: linear-gradient(120deg, $yellow, $yellow);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        border-bottom: 2px solid $yellow;
+        text-decoration: none;
+        color: #fff;
+        -webkit-transition: background-size .125s ease-in;
+        transition: background-size .125s ease-in;
+     }
+    & a:hover{
+        font-weight: 600;
+        color: #000;
+        cursor: pointer;
+        background-size: 100% 100%;
+    }
+}
