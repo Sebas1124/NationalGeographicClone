@@ -3,11 +3,19 @@
 
 $yellow: #FFCC00;
 $Textcolor: #fff;
+$bg: #000;
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.Magazine__Section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg;
 }
 
 .Magazine {
@@ -40,7 +48,7 @@ $Textcolor: #fff;
 .information {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     gap: 1rem;
     font-size: 18px;
     letter-spacing: .5px;
@@ -82,7 +90,7 @@ $Textcolor: #fff;
 }
 
 .Card__Yellow{
-    width: 320px;
+    width: 100%;
     height: 340px;
     border-bottom: 3px solid $yellow;
     border-right: 3px solid $yellow;
@@ -107,6 +115,7 @@ $Textcolor: #fff;
     transition: .2s ease-in;
     opacity: .9;
     transform: scale(1.2);
+    background-size: cover;
 }
 
 .Card .Header{
@@ -324,5 +333,319 @@ $Textcolor: #fff;
         color: #000;
         cursor: pointer;
         background-size: 100% 100%;
+    }
+}
+
+@media (min-width:765px){
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .Magazine{
+        display: flex;
+        
+    }
+
+    .CardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        justify-content: center;
+        margin-left: rem;
+        
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+        }
+
+        & .SimpleCards{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            gap: 1rem;
+        }
+    }
+
+    .Card__Yellow{
+        place-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SimpleCards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news__container{
+        margin-left: 2rem;
+        margin-bottom: 9rem;
+    }
+
+    .News__container{
+        margin-left: 0;
+        justify-content: left;
+    }
+
+    .information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width:1120px){
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .Magazine{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        place-content: center;
+        justify-content: center;
+        column-gap: 20px;
+        grid-column-start: auto;
+        margin: 0 auto;
+        // max-width: 1200px;
+        
+        & .title{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        
+        & .information{
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        & .divider {
+            grid-column: 1/3;
+            grid-row: 3/3;
+        }
+
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 4/1;
+        }
+    }
+
+    .CardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        justify-content: center;
+        margin-left: 5rem;
+        
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+        }
+
+        & .SimpleCards{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            gap: 1rem;
+        }
+    }
+
+    .Card__Yellow{
+        place-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SimpleCards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news__container{
+        margin-left: 1.4rem;
+        margin-bottom: 7rem;
+    }
+
+    .News__container{
+        margin-left: 0;
+        justify-content: left;
+    }
+
+    .information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width:1200px){
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .Magazine{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        place-content: center;
+        justify-content: center;
+
+        & .title{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        
+        & .information{
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        & .divider {
+            grid-column: 1/3;
+            grid-row: 3/3;
+        }
+
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 4/1;
+        }
+    }
+
+    .CardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        justify-content: center;
+        
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 1/2;
+
+        }
+
+        & .SimpleCards{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            gap: 4rem;
+        }
+    }
+
+    .Card__Yellow{
+        place-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SimpleCards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news__container{
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .News__container{
+        width: 300px;
+        margin-left: 0;
+        justify-content: left;
+    }
+
+    .information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width:1700px){
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .Magazine{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        
+        & .title{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+        
+        & .information{
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+        
+        & .divider {
+            grid-column: 1/3;
+            grid-row: 3/3;
+        }
+
+    }
+
+    .CardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+        justify-self: center;
+        
+        & .Card__Yellow{
+            grid-column: 1/3;
+            grid-row: 1/2;
+            align-self: center;
+            justify-self: center;
+        }
+
+        & .SimpleCards{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            gap: 4rem;
+        }
+    }
+
+    .SimpleCards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news__container{
+        margin-bottom: 4rem;
+    }
+
+    .News__container{
+        width: 300px;
+        margin-left: 0;
+        justify-content: left;
+    }
+
+    .information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
     }
 }

@@ -71,64 +71,69 @@ export const App = () => {
         <Navbar/>
       </section>
 
-      <section className='Magazine'>
-
+      <section className='Magazine__Section'>
+        <div className="Magazine">
           <div className="title">
-            <span>November 2022 Issue</span>
-          </div>
-          <div className="information">
-            <a href='/#'>Subscribe</a> to see the stories from <br /> National Geographic magazine.
-          </div>
+              <span>November 2022 Issue</span>
+            </div>
+            <div className="information">
+              <span><a href='/#'>Subscribe</a> to see the stories from <br /> National Geographic magazine.</span>
+            </div>
 
-          <div className="divider"></div>
+            <div className="divider"></div>
 
-          <div className="CardContainer">
-              {/* FirstCard */}
-              <div className="Card__Yellow">
-                <div className="Card">
-                  <a href="/#">
-                  <img className='Card__Image' src="https://i.natgeofe.com/n/4522e658-0255-432f-b2d3-efcfa3827e3d/STOCK_MM9195_AR6139137_3x4.jpg?w=730&h=973" alt="Magazine Image" />
-                  <div className="Header">
-                    <h1>Magazine</h1>
+            <div className="CardContainer">
+                {/* FirstCard */}
+                <div className="Card__Yellow">
+                  <div className="Card">
+                    <a href="/#">
+                    <img className='Card__Image' src="https://i.natgeofe.com/n/4522e658-0255-432f-b2d3-efcfa3827e3d/STOCK_MM9195_AR6139137_3x4.jpg?w=730&h=973" alt="Magazine Image" />
+                    <div className="Header">
+                      <h1>Magazine</h1>
 
-                    <div className="Info">
-                      <p>How was King Tut's tomb discovered 100 years ago?</p>
-                      <br />
-                      <div className="btn">
-                        <box-icon name='menu' color="white"></box-icon> <span className='btn-info'>Read</span>
+                      <div className="Info">
+                        <p>How was King Tut's tomb discovered 100 years ago?</p>
+                        <br />
+                        <div className="btn">
+                          <box-icon name='menu' color="white"></box-icon> <span className='btn-info'>Read</span>
+                        </div>
                       </div>
                     </div>
+                    </a>
                   </div>
-                  </a>
                 </div>
+
+                <div className='SimpleCards'>
+                {
+                  Magazines.map( (Magazine) => (
+                    <SimpleCard key={ Magazine.id } Dates={ Magazine } />
+                  ))
+                }
+                </div>
+
+            </div>
+
+            <div className="news__container">
+            <div className="Header__new line">
+              <div>
+                <h2>In This Issue</h2>
               </div>
+            </div>
 
-              {
-                Magazines.map( (Magazine) => (
-                  <SimpleCard key={ Magazine.id } Dates={ Magazine } />
-                ))
-              }
+            {
+              News_Magazines.map( ( new_magazine ) => (
+                <News key={ new_magazine.id } data={ new_magazine }/>
+              ))
+            }
 
-          </div>
-
-          <div className="Header__new line">
-            <div>
-              <h2>In This Issue</h2>
+            <div className="Magazine__button">
+              <a href="">See all</a>
             </div>
           </div>
-
-          {
-            News_Magazines.map( ( new_magazine ) => (
-              <News key={ new_magazine.id } data={ new_magazine }/>
-            ))
-          }
-
-          <div className="Magazine__button">
-            <a href="">See all</a>
-          </div>
-
-
+        </div>
       </section>
+
+      <hr />
 
     </main>
   )
